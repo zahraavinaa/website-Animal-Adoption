@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Details - Animal Adoption</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pet-details.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="Left Logo" class="logo">
+            <h1>Animal Adoption</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="available-pets.html">Available Pets</a></li>
+                <li><a href="adoption-process.html">Adoption Process</a></li>
+                <li><a href="success-stories.html">Success Stories</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="pet-details">
+            <img class="pet-image" src="" alt="Pet Image">
+            <div class="pet-info">
+                <h2>Pet Name</h2>
+                <p><strong>Age:</strong> </p>
+                <p><strong>Breed:</strong> </p>
+                <p><strong>Weight:</strong> </p>
+                <p><strong>Color:</strong> </p>
+                <p><strong>Medical History:</strong> </p>
+                <p><strong>Temperament:</strong> </p>
+                <p><strong>Diet:</strong> </p>
+                <p><strong>Favorite Activity:</strong> </p>
+                <p><strong>Training:</strong> </p>
+            </div>
+            <a href="adoption-process.html" class="btn">Adopt Me</a>
+        </div>
+    </div>
+
+    <!-- JavaScript Code -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const petId = urlParams.get('id');
+            
+            const petData = {
+                Siamese: {
+                    name: 'Siamese Cat',
+                    age: '2 years old',
+                    breed: 'Siamese',
+                    weight: '4 kg',
+                    color: 'Cream and Black',
+                    medicalHistory: 'Fully vaccinated, no known diseases. Regular vet check-ups.',
+                    temperament: 'Friendly and vocal, loves human company.',
+                    diet: 'High-quality cat food twice a day, enjoys fish treats.',
+                    favoriteActivity: 'Playing with feather toys, climbing.',
+                    training: 'Litter box trained and knows basic commands.',
+                    image: 'Kucing Siamese.jpg'
+                },
+                Ragdoll: {
+                    name: 'Ragdoll',
+                    age: '1 year old',
+                    breed: 'Ragdoll',
+                    weight: '5 kg',
+                    color: 'White and Brown',
+                    medicalHistory: 'Fully vaccinated, no known diseases. Regular vet check-ups.',
+                    temperament: 'Gentle and calm, great with kids.',
+                    diet: 'High-quality cat food twice a day, loves chicken treats.',
+                    favoriteActivity: 'Lazing around, playing with string toys.',
+                    training: 'Litter box trained and knows basic commands.',
+                    image: 'Ragdoll.jpg'
+                },
+                Persian: {
+                    name: 'Persian Cat',
+                    age: '3 years old',
+                    breed: 'Persian',
+                    weight: '4.5 kg',
+                    color: 'White',
+                    medicalHistory: 'Fully vaccinated, no known diseases. Regular vet check-ups.',
+                    temperament: 'Quiet and affectionate, prefers a calm environment.',
+                    diet: 'High-quality cat food twice a day, loves tuna treats.',
+                    favoriteActivity: 'Sitting on laps, being brushed.',
+                    training: 'Litter box trained and knows basic commands.',
+                    image: 'Persian Cat.jpg'
+                },
+                Maine: {
+                    name: 'Maine Coon',
+                    age: '2 years old',
+                    breed: 'Maine Coon',
+                    weight: '6 kg',
+                    color: 'Brown Tabby',
+                    medicalHistory: 'Fully vaccinated, no known diseases. Regular vet check-ups.',
+                    temperament: 'Playful and social, enjoys company of other pets.',
+                    diet: 'High-quality cat food twice a day, loves meat treats.',
+                    favoriteActivity: 'Playing with balls, climbing cat trees.',
+                    training: 'Litter box trained and knows basic commands.',
+                    image: 'Maine Coon.jpg'
+                },
+                Bengal: {
+                    name: 'Bengal',
+                    age: '1 year old',
+                    breed: 'Bengal',
+                    weight: '5 kg',
+                    color: 'Spotted',
+                    medicalHistory: 'Fully vaccinated, no known diseases. Regular vet check-ups.',
+                    temperament: 'Energetic and playful, requires a lot of attention.',
+                    diet: 'High-quality cat food twice a day, loves raw meat treats.',
+                    favoriteActivity: 'Running around, playing with interactive toys.',
+                    training: 'Litter box trained and knows basic commands.',
+                    image: 'Bengal.jpg'
+                },
+                American: {
+                    name: 'American Shorthair',
+                    age: '3 years old',
+                    breed: 'American Shorthair',
+                    weight: '4 kg',
+                    color: 'Silver Tabby',
+                    medicalHistory: 'Fully vaccinated, no known diseases. Regular vet check-ups.',
+                    temperament: 'Easygoing and affectionate, great with families.',
+                    diet: 'High-quality cat food twice a day, loves kibble treats.',
+                    favoriteActivity: 'Playing with laser pointers, napping in sun spots.',
+                    training: 'Litter box trained and knows basic commands.',
+                    image: 'American Shorthair.jpg'
+                },
+                Buldog: {
+                    name: 'Buldog',
+                    age: '2 years old',
+                    breed: 'Bulldog',
+                    weight: '24 kg',
+                    color: 'Brindle',
+                    medicalHistory: 'Fully vaccinated, no known diseases. Regular vet check-ups.',
+                    temperament: 'Calm and courageous, loves lounging.',
+                    diet: 'High-quality dog food twice a day, enjoys chew treats.',
+                    favoriteActivity: 'Playing tug-of-war, napping.',
+                    training: 'House trained and knows basic commands.',
+                    image: 'Buldog.jpg'
+                },
+                golden: {
+                    name: 'Golden Retriever',
+                    age: '2 years old',
+                    breed: 'Golden Retriever',
+                    weight: '30 kg',
+                    color: 'Golden',
+                    medicalHistory: 'Fully vaccinated, no known diseases. Regular vet check-ups.',
+                    temperament: 'Friendly and intelligent, great with kids and other pets.',
+                    diet: 'High-quality dog food twice a day, enjoys bones.',
+                    favoriteActivity: 'Fetching balls, swimming.',
+                    training: 'House trained and knows basic commands.',
+                    image: 'golden retriever.jpg'
+                },
+                Chihuahua: {
+                    name: 'Chihuahua',
+                    age: '1 year old',
+                    breed: 'Chihuahua',
+                    weight: '2 kg',
+                    color: 'Fawn',
+                    medicalHistory: 'Fully vaccinated, no known diseases. Regular vet check-ups.',
+                    temperament: 'Lively and affectionate, prefers being indoors.',
+                    diet: 'High-quality dog food twice a day, enjoys small treats.',
+                    favoriteActivity: 'Playing with small toys, being carried.',
+                    training: 'House trained and knows basic commands.',
+                    image: 'Chihuahua.jpg'
+                },
+                Pomerania: {
+                    name: 'Pomerania',
+                    age: '2 years old',
+                    breed: 'Pomeranian',
+                    weight: '3 kg',
+                    color: 'Orange',
+                    medicalHistory: 'Fully vaccinated, no known diseases. Regular vet check-ups.',
+                    temperament: 'Friendly and playful, good with families.',
+                    diet: 'High-quality dog food twice a day, enjoys small treats.',
+                    favoriteActivity: 'Playing with toys, running around.',
+                    training: 'House trained and knows basic commands.',
+                    image: 'Pomerania.jpg'
+                },
+                Lovebird: {
+                    name: 'Lovebird',
+                    age: '1 year old',
+                    breed: 'Lovebird',
+                    weight: '50 g',
+                    color: 'Green and Peach',
+                    medicalHistory: 'Fully vaccinated, no known diseases. Regular vet check-ups.',
+                    temperament: 'Social and playful, enjoys interaction.',
+                    diet: 'High-quality bird food, enjoys fruits.',
+                    favoriteActivity: 'Flying around, chirping.',
+                    training: 'Hand-tamed and knows basic commands.',
+                    image: 'Lovebird.jpg'
+                },
+                kenari: {
+                    name: 'Kenari',
+                    age: '1 year old',
+                    breed: 'Kenari',
+                    weight: '25 g',
+                    color: 'Yellow',
+                    medicalHistory: 'Fully vaccinated, no known diseases. Regular vet check-ups.',
+                    temperament: 'Friendly and calm, enjoys singing.',
+                    diet: 'High-quality bird food, enjoys seeds.',
+                    favoriteActivity: 'Singing, flying around.',
+                    training: 'Hand-tamed and knows basic commands.',
+                    image: 'kenari.jpg'
+                }
+            };
+
+            const pet = petData[petId];
+
+            if (pet) {
+                document.querySelector('.pet-image').src = pet.image;
+                document.querySelector('.pet-info h2').textContent = pet.name;
+                document.querySelector('.pet-info').innerHTML = `
+                    <h2>${pet.name}</h2>
+                    <p><strong>Age:</strong> ${pet.age}</p>
+                    <p><strong>Breed:</strong> ${pet.breed}</p>
+                    <p><strong>Weight:</strong> ${pet.weight}</p>
+                    <p><strong>Color:</strong> ${pet.color}</p>
+                    <p><strong>Medical History:</strong> ${pet.medicalHistory}</p>
+                    <p><strong>Temperament:</strong> ${pet.temperament}</p>
+                    <p><strong>Diet:</strong> ${pet.diet}</p>
+                    <p><strong>Favorite Activity:</strong> ${pet.favoriteActivity}</p>
+                    <p><strong>Training:</strong> ${pet.training}</p>
+                `;
+            } else {
+                document.querySelector('.pet-info').innerHTML = '<p>Pet not found.</p>';
+            }
+        });
+    </script>
+</body>
+</html>

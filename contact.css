@@ -1,0 +1,32 @@
+/* contact.css */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ecebf6, #c9aee0);
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
